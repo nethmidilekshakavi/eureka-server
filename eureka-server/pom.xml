@@ -13,23 +13,24 @@
 		<relativePath/>
 	</parent>
 
-	<groupId>lk.ijse</groupId>
-	<artifactId>eureka-server</artifactId>
+	<groupId>com.spms</groupId>
+	<artifactId>config-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>eureka-server</name>
+	<name>config-server</name>
 
 	<properties>
-		<java.version>21</java.version>
+		<java.version>17</java.version>
 		<spring-cloud.version>2024.0.1</spring-cloud.version>
 	</properties>
 
 	<dependencies>
-
-		<!-- Eureka Server -->
+		<!-- Config Server -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+			<artifactId>spring-cloud-config-server</artifactId>
 		</dependency>
+
+		<!-- Eureka Client -->
 
 		<!-- Spring Boot Test -->
 		<dependency>
@@ -37,7 +38,10 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+		</dependency>
 	</dependencies>
 
 	<dependencyManagement>
